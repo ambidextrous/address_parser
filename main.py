@@ -9,7 +9,7 @@ from postal.parser import parse_address
 def strip_punctuation(s: str) -> str:
     """
     Returns a copy of a given string with punctuation removed
-    
+
     strip_punctuation("Dog!5 ca.T") -> "Dog5 caT" 
     """
     exclude = set(string.punctuation)
@@ -38,8 +38,8 @@ def fix_capitalization(parsed_substring: str, original_string: str) -> str:
 
 def format_address(raw_address: str) -> Dict[str, str]:
     """
-    Calls postal NLP library to parse street and housenumber data from a
-    given address string.
+    Calls pypostal NLP library to parse street and housenumber data from a
+    given address string: https://github.com/openvenues/pypostal
 
     format_address('Calle 39 No 1540') 
     ->
